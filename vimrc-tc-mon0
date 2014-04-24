@@ -1,0 +1,36 @@
+"set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set bg=dark
+set nocp
+set nu
+filetype plugin on
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+set cindent
+syntax on
+set nocompatible
+"set completeopt=menu,preview
+set cindent
+
+set backspace=indent,eol,start
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_DisplayMode = 1
+let OmniCpp_ShowScopeInAbbr = 0
+let OmniCpp_ShowPrototypeInAbbr = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_MayCompleteDot = 1
+let OmniCpp_MayCompleteArrow = 1
+let OmniCpp_MayCompleteScope = 1
+"add by zhangbin08 to solve chinese character display
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk,gb2312,gb18030
+set termencoding=utf-8
+set encoding=utf-8
+
+"added by liwenjing for python edit
+autocmd FileType python setlocal et sta sw=4 sts=4
+set filetype=python
+au BufNewFile,BufRead *.py,*.pyw setf python
+set encoding=utf-8
